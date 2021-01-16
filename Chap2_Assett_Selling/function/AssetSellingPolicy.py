@@ -137,8 +137,8 @@ class AssetSellingPolicy():
         :param increment_size: the increment size over the range of theta values
         :return: list - list of theta values
         """
-        theta_low_values = np.linspace(low_min, low_max)
-        theta_high_values = np.linspace(high_min, high_max)
+        theta_low_values = np.linspace(low_min, low_max,num=5)
+        theta_high_values = np.linspace(high_min, high_max, num=5)
 
         theta_values = []
         for x in theta_low_values:

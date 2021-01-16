@@ -123,7 +123,7 @@ class AssetSellingModel():
                the exogenous info does not factor into the transition function)
         :return: dict - updated resource
         """
-        new_resource = 0 if decision.sell is 1 else self.state.resource
+        new_resource = 0 if decision.sell == 1 else self.state.resource
         return {"resource": new_resource}
 
     def objective_fn(self, decision, exog_info):
