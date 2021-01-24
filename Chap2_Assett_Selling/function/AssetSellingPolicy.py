@@ -73,8 +73,9 @@ class AssetSellingPolicy():
         track_signal = info_tuple[0]
         alpha = info_tuple[1]
         prev_price = info_tuple[2]
-        print("alpha = {},prev_price = {}".format(alpha,prev_price))
+        #print("alpha = {},prev_price = {}".format(alpha,prev_price))
         smoothed_price = (1-alpha) * prev_price + alpha * state.price
+        print("smoothed_price = {}".format(smoothed_price))
         new_decision = {'sell': 1, 'hold': 0} if state.price >= smoothed_price + track_signal \
             else {'sell': 0, 'hold': 1}
         return new_decision
